@@ -1,13 +1,13 @@
-### Cross-Site Scripting (XSS)
+# Cross-Site Scripting (XSS)
 
-XSS stands for **Cross-Site Scripting**. occurs when an attacker injects malicious scripts into a website. These scripts are executed on the user's browser, allowing attackers to steal sensitive information such as cookies, session tokens, or credentials.
+XSS stands for **Cross-Site Scripting**. It occurs when an attacker injects malicious scripts into a website. These scripts are executed on the user's browser, allowing attackers to steal sensitive information such as cookies, session tokens, or credentials.
 
-### How It Works:
+## How It Works:
 
 1. **Attacker**: Injects a malicious script into a vulnerable website.
 2. **User Side**: The script is executed whenever a user visits the infected website. This can lead to data theft, unauthorized actions, and other malicious activities.
 
-### Common Vulnerabilities:
+## Common Vulnerabilities:
 
 1. **User Session Hijacking**: Attackers can steal session cookies, allowing them to impersonate the user.
 2. **Unauthorized Actions**: Attackers can perform actions on behalf of the user, such as sending messages without the user's knowledge.
@@ -15,7 +15,7 @@ XSS stands for **Cross-Site Scripting**. occurs when an attacker injects malicio
 4. **Stealing Critical Information**: Sensitive data, such as personal information and credentials, can be stolen.
 5. **Phishing Attacks**: Attackers can use XSS to create fake login pages and trick users into submitting their credentials.
 
-### Example1. of an XSS Attack:
+## Example 1 of an XSS Attack:
 
 In a typical development scenario, query parameters are often accessed using JavaScript, such as:
 
@@ -25,7 +25,7 @@ new URLSearchParams(window.location.search).get("name");
 
 This `name` parameter is then updated in the DOM using `innerHTML`. If proper sanitization isn't applied, an attacker could manipulate the URL to inject a malicious script.
 
-### Example will add this in img :
+### Example: Malicious Code in Image Tag
 
 ```html
 <img
